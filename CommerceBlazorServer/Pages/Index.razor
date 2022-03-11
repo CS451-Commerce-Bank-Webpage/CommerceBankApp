@@ -1,0 +1,76 @@
+﻿@page "/"
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<div class="login">
+    <style>
+        h1 {
+            height: 10%;
+        }
+
+        section {
+            margin: auto;
+            width: 60vw;
+            height: 30vw;
+            font-family: "Poppins", sans-serif;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+        }
+
+        input[type="text"] {
+            offset: 200px;
+            margin: auto;
+            text-indent: 10px;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            border: 3px solid #a9a9a9;
+            padding: 2px;
+            border-radius: 2vh;
+        }
+
+        input[type="submit"] {
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            background-color: #78BE42;
+            border: 3px solid #78BE42;
+            padding-left: 100px;
+            padding-right: 100px;
+            border-radius: 2vh;
+        }
+
+        body {
+            background-image: url('https://www.commercebank.com/-/media/cb/articles/personal/2017/tips-for-making-the-most-of-your-job.jpg?sc=1&revision=94074016-44d3-413d-930b-02d4df1563f3&modified=20170908165600&hash=C23F8BBDC8D0270B4928738A70323E5F074420C3');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 50vw;
+        }
+
+        a {
+            color: #a9a9a9;
+        }
+    </style>
+
+    <h1></h1>
+    <section>
+        <h1></h1>
+        <img src="https://i.imgur.com/7UD3NZ5.png" alt="logo">
+        <form method="post" action="">
+            <p> <input type="text" name="login" value="" placeholder="Username"></p>
+            <p><input type="text" name="password" value="" placeholder="Password"></p>
+            <p class="submit"><input type="submit" name="commit" value="Login"></p>
+            <p><a href="#">Create Account</a></p>
+            <p><a href="#">Forgot password?</a></p>
+        </form>
+    </section>
+</div>
