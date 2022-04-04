@@ -82,6 +82,14 @@ using CommerceBlazorServer.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "c:\Users\Emc11\OneDrive - University of Missouri\Spring 2022\Group Project\CommerceBankApp\CommerceBlazorServer\Pages\People.razor"
+using DataLibrary;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/people")]
     public partial class People : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +97,7 @@ using CommerceBlazorServer.Shared;
         {
         }
         #pragma warning restore 1998
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IDataAccess _data { get; set; }
     }
 }
 #pragma warning restore 1591

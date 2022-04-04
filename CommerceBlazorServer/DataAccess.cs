@@ -4,26 +4,26 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace DataLibrary
 {
-    public class DataAccess
+    public class DataAccess : IDataAccess
     {
-        public static List<T> LoadData<T, U>(string sql, U parameters, string connectionString)
+        public async Task<List<T>> LoadData<T, U>(string sql, U parameters, string connectionString)
         {
             using (IDbConnection connection = new MySqlConnection(connectionString))
             {
-                List<T> rows = connection.Query<T>(sql, parameters).ToList();
+                var rows = await connection.QueryAsync<T>(sql, parameters);
 
-                return rows;
+                return rows.ToList();
             }
         }
-    {
-        public static void SaveData<T, U>(string sql, U parameters, string connectionString)
+        public Task SaveData<T, U>(string sql, U parameters, string connectionString)
         {
             using (IDbConnection connection = new MySqlConnection(connectionString))
             {
-                connection.Execute(sql, parameters);
+                return connection.ExecuteAsync(sql, parameters);
 
             }
         }

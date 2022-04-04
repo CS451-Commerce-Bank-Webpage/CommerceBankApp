@@ -1,8 +1,33 @@
 @page "/people"
 
 @using DataLibrary
+@using CommerceBlazorServer.Models
+@using Microsoft.Extensions.Configuration
 @inject IDataAccess _data
+@inject IConfiguration _config
 
 <h3>People</h3>
 
-@code {}
+@if (people == null)
+{
+    <p>...Loading</p>
+}
+else
+{
+    @foreach (var p in people)
+    {
+        <p>
+            @p.FirstName @p.LastName
+        </p>
+    }
+}
+
+@code {
+    List<PersonModel> people;
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "SELECT * FROM people";
+
+        people = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+        }
+}
