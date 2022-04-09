@@ -111,39 +111,6 @@
         }
       },
       {
-        "HashCode": 654789701,
-        "Kind": "Components.Component",
-        "Name": "CommerceBlazorServer.Pages.People",
-        "AssemblyName": "CommerceBlazorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "People"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "CommerceBlazorServer.Pages.People"
-        }
-      },
-      {
-        "HashCode": 1311137242,
-        "Kind": "Components.Component",
-        "Name": "CommerceBlazorServer.Pages.People",
-        "AssemblyName": "CommerceBlazorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CommerceBlazorServer.Pages.People"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "CommerceBlazorServer.Pages.People",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1021709193,
         "Kind": "Components.Component",
         "Name": "CommerceBlazorServer.App",

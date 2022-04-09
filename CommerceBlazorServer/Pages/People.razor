@@ -10,14 +10,14 @@
 
 @if (people == null)
 {
-    <p>...Loading</p>
+    <p>…Loading</p>
 }
 else
 {
     @foreach (var p in people)
     {
         <p>
-            @p.FirstName @p.LastName
+            @p.account_id @p.processing_date @p.balance @p.type @p.amount @p.location @p.description
         </p>
     }
 }

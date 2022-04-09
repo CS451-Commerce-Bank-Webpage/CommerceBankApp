@@ -7,8 +7,13 @@ namespace CommerceBlazorServer.Models
 {
     public class PersonModel
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string account_id { get; set; }
+        public string processing_date { get; set; }
+        public string balance { get; set; }
+        public string type { get; set; }
+        public string amount { get; set; }
+        public string location { get; set; }
+        public string description{ get; set; }
+
     }
 }
