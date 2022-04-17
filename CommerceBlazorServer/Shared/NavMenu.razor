@@ -1,6 +1,13 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<style>
+    div {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">Commerce Bank</a>
+        <a class="navbar-brand" href=""><img src="https://i.imgur.com/j4t5ZrR.png" alt="logo"></a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,17 +18,22 @@
     <nav class="flex-column">
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-account-login" aria-hidden="true"></span> Login
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="home" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="support">
-                <span class="oi oi-plus" aria-hidden="true"></span> Support
+            <NavLink class="nav-link" href="transactions">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Transactions
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="aboutus">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> About us
+            <NavLink class="nav-link" href="settings">
+                <span class="oi oi-wrench" aria-hidden="true"></span> Settings
             </NavLink>
         </div>
     </nav>

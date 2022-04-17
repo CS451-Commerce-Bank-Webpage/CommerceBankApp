@@ -1,0 +1,54 @@
+body[b-7kqn8g943v] {
+    background-image: url('https://www.commercebank.com/-/media/cb/articles/personal/2017/tips-for-making-the-most-of-your-job.jpg?sc=1&revision=94074016-44d3-413d-930b-02d4df1563f3&modified=20170908165600&hash=C23F8BBDC8D0270B4928738A70323E5F074420C3');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1[b-7kqn8g943v] {
+    height: 10%;
+}
+
+section[b-7kqn8g943v] {
+    margin: auto;
+    width: 60vw;
+    height: 30vw;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+}
+
+input[type="text"][b-7kqn8g943v] {
+    offset: 200px;
+    margin: auto;
+    text-indent: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: 3px solid #a9a9a9;
+    padding: 2px;
+    border-radius: 2vh;
+}
+
+input[type="submit"][b-7kqn8g943v] {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: #78BE42;
+    border: 3px solid #78BE42;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 2vh;
+}
+
+img[b-7kqn8g943v] {
+    width: 100%;
+    height: auto;
+    max-width: 50vw;
+}
+
+a[b-7kqn8g943v] {
+    color: #a9a9a9;
+}
+

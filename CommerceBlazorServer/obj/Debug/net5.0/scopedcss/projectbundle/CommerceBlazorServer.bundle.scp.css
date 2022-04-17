@@ -1,5 +1,161 @@
 @import '';
 
+/* _content/CommerceBlazorServer/Pages/Home.razor.rz.scp.css */
+body[b-2qvi1hb5bp] {
+    padding: 20px;
+    background-image: none;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+}
+
+p[b-2qvi1hb5bp] {
+    margin-top: 2em;
+    margin-bottom: 10em;
+    margin-left: 2em;
+}
+
+PageTitle[b-2qvi1hb5bp] {
+    font-size: 30px;
+}
+
+label[b-2qvi1hb5bp] {
+    font-size: 20px;
+}
+
+#my-chart.bar[b-2qvi1hb5bp] {
+    height: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+/* _content/CommerceBlazorServer/Pages/Login.razor.rz.scp.css */
+body[b-7kqn8g943v] {
+    background-image: url('https://www.commercebank.com/-/media/cb/articles/personal/2017/tips-for-making-the-most-of-your-job.jpg?sc=1&revision=94074016-44d3-413d-930b-02d4df1563f3&modified=20170908165600&hash=C23F8BBDC8D0270B4928738A70323E5F074420C3');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1[b-7kqn8g943v] {
+    height: 10%;
+}
+
+section[b-7kqn8g943v] {
+    margin: auto;
+    width: 60vw;
+    height: 30vw;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+}
+
+input[type="text"][b-7kqn8g943v] {
+    offset: 200px;
+    margin: auto;
+    text-indent: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    border: 3px solid #a9a9a9;
+    padding: 2px;
+    border-radius: 2vh;
+}
+
+input[type="submit"][b-7kqn8g943v] {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: #78BE42;
+    border: 3px solid #78BE42;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 2vh;
+}
+
+img[b-7kqn8g943v] {
+    width: 100%;
+    height: auto;
+    max-width: 50vw;
+}
+
+a[b-7kqn8g943v] {
+    color: #a9a9a9;
+}
+
+/* _content/CommerceBlazorServer/Pages/Settings.razor.rz.scp.css */
+input:invalid[b-ak2hilm075] {
+    border: 4px solid red;
+}
+
+body[b-ak2hilm075] {
+    padding: 20px;
+    background-image: none;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+}
+
+p[b-ak2hilm075] {
+    margin-top: 2em;
+    margin-bottom: 10em;
+    margin-left: 2em;
+}
+
+PageTitle[b-ak2hilm075] {
+    font-size: 30px;
+}
+
+label[b-ak2hilm075] {
+    font-size: 20px;
+}
+/* _content/CommerceBlazorServer/Pages/Transactions.razor.rz.scp.css */
+body[b-n17afsof3f] {
+    padding: 20px;
+    background-image: none;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+}
+
+PageTitle[b-n17afsof3f] {
+    font-size: 30px;
+}
+
+label[b-n17afsof3f] {
+    font-size: 20px;
+}
+
+table[b-n17afsof3f] {
+    width: 100%;
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight: normal;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+
+tr[b-n17afsof3f] {
+    background-color: #DDEFEF;
+    border: solid px #DDEEEE;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+    tr:nth-child(even)[b-n17afsof3f] {
+        background: #CCC;
+    }
+
+    tr:nth-child(odd)[b-n17afsof3f] {
+        background: #FFF;
+    }
+ 
+
+th[b-n17afsof3f] {
+    font-weight: normal;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
 /* _content/CommerceBlazorServer/Shared/MainLayout.razor.rz.scp.css */
 .page[b-abwf12hp6d] {
     position: relative;
@@ -7,9 +163,11 @@
     flex-direction: column;
 }
 
+
 main[b-abwf12hp6d] {
     flex: 1;
 }
+
 
 .sidebar[b-abwf12hp6d] {
     background-image: linear-gradient(45deg, #4FA800 0%, #006747 100%);
@@ -19,6 +177,7 @@ main[b-abwf12hp6d] {
     background-color: white;
     border-bottom: 1px solid #d6d5d5;
     justify-content: flex-end;
+    width: 88vw;
     height: 3.5rem;
     display: flex;
     align-items: center;
@@ -54,7 +213,7 @@ main[b-abwf12hp6d] {
     }
 
     .sidebar[b-abwf12hp6d] {
-        width: 250px;
+        width: 12vw;
         height: 100vh;
         position: sticky;
         top: 0;
@@ -123,6 +282,12 @@ main[b-abwf12hp6d] {
     background-color: rgba(255,255,255,0.1);
     color: white;
 }
+
+img[b-wyupt6epzz] {
+    width: 100%;
+    height: auto;
+}
+
 
 @media (min-width: 641px) {
     .navbar-toggler[b-wyupt6epzz] {

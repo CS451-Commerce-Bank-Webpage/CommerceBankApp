@@ -1,0 +1,24 @@
+input:invalid[b-ak2hilm075] {
+    border: 4px solid red;
+}
+
+body[b-ak2hilm075] {
+    padding: 20px;
+    background-image: none;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+}
+
+p[b-ak2hilm075] {
+    margin-top: 2em;
+    margin-bottom: 10em;
+    margin-left: 2em;
+}
+
+PageTitle[b-ak2hilm075] {
+    font-size: 30px;
+}
+
+label[b-ak2hilm075] {
+    font-size: 20px;
+}

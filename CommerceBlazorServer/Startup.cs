@@ -1,4 +1,5 @@
 using CommerceBlazorServer.Data;
+using DataLibrary;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;

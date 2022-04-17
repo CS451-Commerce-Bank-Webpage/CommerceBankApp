@@ -50,6 +50,12 @@
     color: white;
 }
 
+img[b-wyupt6epzz] {
+    width: 100%;
+    height: auto;
+}
+
+
 @media (min-width: 641px) {
     .navbar-toggler[b-wyupt6epzz] {
         display: none;

@@ -1,0 +1,48 @@
+body[b-n17afsof3f] {
+    padding: 20px;
+    background-image: none;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+}
+
+PageTitle[b-n17afsof3f] {
+    font-size: 30px;
+}
+
+label[b-n17afsof3f] {
+    font-size: 20px;
+}
+
+table[b-n17afsof3f] {
+    width: 100%;
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-weight: normal;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+
+tr[b-n17afsof3f] {
+    background-color: #DDEFEF;
+    border: solid px #DDEEEE;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+    tr:nth-child(even)[b-n17afsof3f] {
+        background: #CCC;
+    }
+
+    tr:nth-child(odd)[b-n17afsof3f] {
+        background: #FFF;
+    }
+ 
+
+th[b-n17afsof3f] {
+    font-weight: normal;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}

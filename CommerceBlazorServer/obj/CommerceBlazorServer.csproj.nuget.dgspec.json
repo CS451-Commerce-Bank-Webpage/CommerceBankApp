@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\foste\\source\\repos\\CommerceBlazorServer\\CommerceBlazorServer\\CommerceBlazorServer.csproj": {}
+    "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\CommerceBlazorServer\\CommerceBlazorServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\foste\\source\\repos\\CommerceBlazorServer\\CommerceBlazorServer\\CommerceBlazorServer.csproj": {
+    "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\CommerceBlazorServer\\CommerceBlazorServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\foste\\source\\repos\\CommerceBlazorServer\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
+        "projectUniqueName": "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
         "projectName": "CommerceBlazorServer",
-        "projectPath": "C:\\Users\\foste\\source\\repos\\CommerceBlazorServer\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
-        "packagesPath": "C:\\Users\\foste\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\foste\\source\\repos\\CommerceBlazorServer\\CommerceBlazorServer\\obj\\",
+        "projectPath": "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
+        "packagesPath": "C:\\Users\\rjhug\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\CommerceBlazorServer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\foste\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\rjhug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -27,7 +33,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\DataLibrary\\DataLibrary.csproj": {
+                "projectPath": "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\DataLibrary\\DataLibrary.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -39,6 +49,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Data.Tools.Msbuild": {
+              "target": "Package",
+              "version": "[16.0.62004.28040, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.28, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +81,77 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\DataLibrary\\DataLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\DataLibrary\\DataLibrary.csproj",
+        "projectName": "DataLibrary",
+        "projectPath": "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\DataLibrary\\DataLibrary.csproj",
+        "packagesPath": "C:\\Users\\rjhug\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rjhug\\OneDrive\\Documents\\Desktop\\CommerceBank\\DataLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rjhug\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.28, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
