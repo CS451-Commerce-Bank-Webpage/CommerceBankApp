@@ -4,8 +4,11 @@
     flex-direction: column;
 }
 
+.div[b-abwf12hp6d] {
+    font-family: "Poppins", sans-serif;
+}
 
-main[b-abwf12hp6d] {
+.main[b-abwf12hp6d] {
     flex: 1;
 }
 
@@ -50,6 +53,9 @@ main[b-abwf12hp6d] {
 
 @media (min-width: 641px) {
     .page[b-abwf12hp6d] {
+        background-image: url('https://www.commercebank.com/-/media/cb/articles/personal/2017/tips-for-making-the-most-of-your-job.jpg?sc=1&revision=94074016-44d3-413d-930b-02d4df1563f3&modified=20170908165600&hash=C23F8BBDC8D0270B4928738A70323E5F074420C3');
+        background-size: cover;
+        background-repeat: no-repeat;
         flex-direction: row;
     }
 

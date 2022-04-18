@@ -1,8 +1,4 @@
-body[b-7kqn8g943v] {
-    background-image: url('https://www.commercebank.com/-/media/cb/articles/personal/2017/tips-for-making-the-most-of-your-job.jpg?sc=1&revision=94074016-44d3-413d-930b-02d4df1563f3&modified=20170908165600&hash=C23F8BBDC8D0270B4928738A70323E5F074420C3');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 
 h1[b-7kqn8g943v] {
     height: 10%;
@@ -42,6 +38,19 @@ input[type="submit"][b-7kqn8g943v] {
     border-radius: 2vh;
 }
 
+b[b-7kqn8g943v] {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: #78BE42;
+    border: 3px solid #78BE42;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 2vh;
+}
+
+
 img[b-7kqn8g943v] {
     width: 100%;
     height: auto;
@@ -52,3 +61,79 @@ a[b-7kqn8g943v] {
     color: #a9a9a9;
 }
 
+input[type=create][b-7kqn8g943v] {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 2vh;
+    align-self: center;
+}
+
+input[type=password][b-7kqn8g943v] {
+    width: 37.25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 2vh;
+}
+
+button[b-7kqn8g943v] {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    color: #a9a9a9;
+}
+
+.cancelbtn[b-7kqn8g943v] {
+    color: white;
+    padding: 15px 20px;
+    background-color: #F47174;
+}
+
+.signupbtn[b-7kqn8g943v] {
+    color: white;
+    padding: 15px 20px;
+    background-color: #78BE42;
+}
+
+.cancelbtn[b-7kqn8g943v],
+.signupbtn[b-7kqn8g943v] {
+    float: inherit;
+    width: 45%;
+    border-radius: 1vh;
+}
+
+.fillout[b-7kqn8g943v] {
+    text-align: right;
+    padding-right: 18%;
+}
+
+.container[b-7kqn8g943v] {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.clearfix[b-7kqn8g943v]::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and (max-width: 300px) {
+    .cancelbtn[b-7kqn8g943v],
+    .signupbtn[b-7kqn8g943v] {
+        width: 95%;
+    }
+}

@@ -1,0 +1,52 @@
+﻿@page "/create"
+@layout DefaultLayout
+
+<body>
+<PageTitle>Create an Account</PageTitle>
+
+<div>
+	<p>
+	<label> Username </label>
+	<br />
+	<input type="text" id="un" name="username">
+	</p>
+	
+	<p>
+	<label> Password </label>
+	<br />
+	<input type="text" id="pw" name="password">
+	</p>
+
+	<p>
+	<label> Confirm Password </label>
+	<br />
+	<input type="text" id="cpw" name="confirm">
+	</p>
+
+	<p>
+	<label> Account Number </label>
+	<br />
+	<input type="text" id="an" name="account">
+	</p>
+	<p>
+	<label> Email </label>
+	<br />
+	<input type="text" id="em" name="email" >
+	</p>
+	<p>
+     <label>Recovery Question</label>
+	 <br />
+     <select>
+		<option value="sq1">What is your mother's maiden name?</option>
+		<option value="sq2">What was your first pet's name?</option>
+		<option value="sq3">What was your favorite childhood cartoon?</option>
+		<option value="sq4">Who is your favorite author?</option>
+		<option value="sq5">What was your first car?</option>
+	</select>
+	<br />
+	<br />
+	<input type="text" id="sq" name="security">
+	</p>
+
+</div>
+</body>

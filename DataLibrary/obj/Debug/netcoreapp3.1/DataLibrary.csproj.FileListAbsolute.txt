@@ -8,3 +8,13 @@ C:\Users\rjhug\Downloads\CommerceBankApp-master\CommerceBankApp-master\DataLibra
 C:\Users\rjhug\Downloads\CommerceBankApp-master\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.CoreCompileInputs.cache
 C:\Users\rjhug\Downloads\CommerceBankApp-master\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.dll
 C:\Users\rjhug\Downloads\CommerceBankApp-master\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.pdb
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.deps.json
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.dll
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.pdb
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.AssemblyReference.cache
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.AssemblyInfo.cs
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.dll
+C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.pdb

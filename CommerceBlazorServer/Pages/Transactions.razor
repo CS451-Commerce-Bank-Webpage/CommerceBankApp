@@ -1,5 +1,11 @@
 ﻿@page "/transactions"
 
+@using DataLibrary
+@using CommerceBlazorServer.Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
+
 
 <body>
     <div>
@@ -7,63 +13,39 @@
 <br  />
 <label> Current Balance: <var>5000</var></label>
 <br  />
-<!--table and var above are hard coded to work on style, needs to connect to db-->
-<table>
-    <tr>
-    <th>Account #</th>
-    <th>Processing Date</th>
-    <th>Balance</th>
-    <th>CR or DR</th>
-    <th>Ammount</th>
-    <th>Location</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <th>211111110</th>
-    <th>11/03/21</th>
-    <th>4,998.00</th>
-    <th>DR</th>
-    <th>$2.00</th>
-    <th>MO</th>
-    <th>Starbucks</th>
-  </tr>
-  <tr>
-    <th>211111110</th>
-    <th>11/03/21</th>
-    <th>5,798.00</th>
-    <th>CR</th>
-    <th>$800.00</th>
-    <th>MO</th>
-    <th>Payroll</th>
-  </tr>
-  <tr>
-    <th>211111110</th>
-    <th>11/03/21</th>
-    <th>4,998.00</th>
-    <th>DR</th>
-    <th>$8.00</th>
-    <th>MO</th>
-    <th>Chipotle</th>
-  </tr>
-  <tr>
-    <th>211111110</th>
-    <th>11/04/21</th>
-    <th>4,998.00</th>
-    <th>DR</th>
-    <th>$10.00</th>
-    <th>MO</th>
-    <th>ATM</th>
-  </tr>
-  <tr>
-    <th>211111110</th>
-    <th>11/05/21</th>
-    <th>4,998.00</th>
-    <th>DR</th>
-    <th>$32.00</th>
-    <th>KS</th>
-    <th>Hoolihans</th>
-  </tr>
-</table>
+
+@if (people == null)
+{
+    <p>…Loading</p>
+}
+else
+{
+    <table>
+    @foreach (var p in people)
+    {
+        <tr>
+            
+            <th>@p.account_id </th>
+            <th>@p.processing_date </th>
+            <th>@p.balance @p.type </th>
+            <th>@p.amount </th>
+            <th>@p.location </th>
+            <th>@p.description</th>
+        </tr>
+    }
+    </table>
+}
+
+@code {
+    List<PersonModel> people;
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "SELECT * FROM transactions ";
+
+        people = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+    }
+}
+
 </div>
 </body>
 
