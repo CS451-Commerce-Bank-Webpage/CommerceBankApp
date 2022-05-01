@@ -1,5 +1,10 @@
 ﻿@page "/create"
 @layout DefaultLayout
+@using DataLibrary
+@using CommerceBlazorServer.Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
 
 <body>
 <PageTitle>Create an Account</PageTitle>
@@ -8,45 +13,148 @@
 	<p>
 	<label> Username </label>
 	<br />
-	<input type="text" id="un" name="username">
+	<input @bind="username" @bind:event="oninput"/>
+	@if (account == null)
+	{
+		<p>…Loading</p>
+	}
+	else
+	{
+		@foreach (var a in account)
+		{
+			if(a.username == username)
+				{
+						<p>(Username already exists. Please enter a different username)</p>
+						user = false;
+					}
+					else
+					{
+						user = true;
+						break;
+					}
+				}
+	}
 	</p>
-	
 	<p>
 	<label> Password </label>
 	<br />
-	<input type="text" id="pw" name="password">
+	<input @bind="password" @bind:event="oninput" />
 	</p>
 
 	<p>
 	<label> Confirm Password </label>
 	<br />
-	<input type="text" id="cpw" name="confirm">
+	<input @bind="passwordc" @bind:event="oninput" />
 	</p>
+	@if(passwordc != password)
+		{
+			<p>(Passwords do not match. Please make sure they are the same)</p>
+		}
+		else
+		{
+			<p>(Matches)</p>
+		}
 
 	<p>
 	<label> Account Number </label>
 	<br />
-	<input type="text" id="an" name="account">
+	<input @bind="account_id" @bind:event="oninput" />
+		@if (account == null)
+	{
+		<p>…Loading</p>
+	}
+	else
+	{
+		@foreach (var a in account)
+		{
+			if(a.account_id == account_id)
+				{
+						<p>(Account Number already has an existing account)</p>
+						accNum = false;
+					}
+					else
+					{
+						accNum = true;
+						break;
+					}
+				}
+	}
 	</p>
 	<p>
 	<label> Email </label>
 	<br />
-	<input type="text" id="em" name="email" >
+	<input @bind="email" @bind:event="oninput" />
+			@if (account == null)
+	{
+		<p>…Loading</p>
+	}
+	else
+	{
+		@foreach (var a in account)
+		{
+			if(a.email == email)
+				{
+						<p>(This email already has an existing account)</p>
+						email1 = false;
+					}
+					else
+					{
+						email1 = true;
+						break;
+					}
+				}
+	}
 	</p>
 	<p>
      <label>Recovery Question</label>
 	 <br />
-     <select>
-		<option value="sq1">What is your mother's maiden name?</option>
-		<option value="sq2">What was your first pet's name?</option>
-		<option value="sq3">What was your favorite childhood cartoon?</option>
-		<option value="sq4">Who is your favorite author?</option>
-		<option value="sq5">What was your first car?</option>
+     <select @bind="security_question">
+		<option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+		<option value="What was your first pet's name">What was your first pet's name?</option>
+		<option value="What was your favorite childhood cartoon?">What was your favorite childhood cartoon?</option>
+		<option value="Who is your favorite author?">Who is your favorite author?</option>
+		<option value="What was your first car?">What was your first car?</option>
 	</select>
-	<br />
-	<br />
-	<input type="text" id="sq" name="security">
-	</p>
 
+	<br />
+	<br />
+	<input @bind="security_answer" @bind:event="oninput" />
+	</p>
+}
+@if(accNum == true && email1 == true && user == true){
+	<button @onclick="InsertData" style="width:auto;">Submit</button>
+}
+		@code{
+			public string account_id = "";
+			public string username = "";
+			public string email = "";
+			public string security_question = "";
+			public string password = "";
+			public string passwordc = "";
+			public string security_answer = ""; 
+			public string date_of_birth = "";
+			public Boolean user = false;
+			public Boolean email1 = false;
+			public Boolean accNum = false;
+			
+
+	}
+
+		@code{
+	List<PersonModel> account;
+    private async Task InsertData()
+    {
+        string sql = "insert into database.account(account_id, email, username, password, date_of_birth, security_question, security_answer) values(@account_id, @email, @username, @password, @date_of_birth, @security_question, @security_answer) ";
+        await _data.SaveData(sql, new {account_id, email, username, password, date_of_birth, security_question, security_answer}, _config.GetConnectionString("default"));
+    }
+	    protected override async Task OnInitializedAsync()
+    {
+        string sql = "SELECT * FROM account ";
+
+        account = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+    }
+
+  
+	}
 </div>
 </body>
