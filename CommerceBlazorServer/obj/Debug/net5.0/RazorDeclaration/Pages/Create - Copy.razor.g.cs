@@ -13,91 +13,91 @@ namespace CommerceBlazorServer.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 1 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 2 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 3 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 4 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 5 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 6 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 7 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 8 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 9 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using CommerceBlazorServer;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 10 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\_Imports.razor"
 using CommerceBlazorServer.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
+#line 3 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\Pages\Create - Copy.razor"
 using DataLibrary;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
+#line 4 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\Pages\Create - Copy.razor"
 using CommerceBlazorServer.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
+#line 5 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\Pages\Create - Copy.razor"
 using Microsoft.Extensions.Configuration;
 
 #line default
@@ -105,7 +105,7 @@ using Microsoft.Extensions.Configuration;
 #nullable disable
     [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(DefaultLayout))]
     [Microsoft.AspNetCore.Components.RouteAttribute("/create")]
-    public partial class Create : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Create___Copy : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -113,7 +113,7 @@ using Microsoft.Extensions.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 127 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
+#line 127 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\Pages\Create - Copy.razor"
               
 			public string account_id = "";
 			public string username = "";
@@ -134,7 +134,7 @@ using Microsoft.Extensions.Configuration;
 #line hidden
 #nullable disable
 #nullable restore
-#line 143 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
+#line 143 "C:\Users\Nolan\Documents\SeniorCS\Commerece\CommerceBankApp-Create-account\CommerceBankApp-Create-account\CommerceBlazorServer\Pages\Create - Copy.razor"
               
 	List<PersonModel> account;
     private async Task InsertData()

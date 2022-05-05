@@ -14,6 +14,7 @@ namespace CommerceBlazorServer.Models
         public string amount { get; set; }
         public string location { get; set; }
         public string description{ get; set; }
-
+        public string username { get; set; }
+        public string email { get; set; }
     }
 }

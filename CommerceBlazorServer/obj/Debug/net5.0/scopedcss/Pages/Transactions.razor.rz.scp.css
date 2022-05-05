@@ -29,8 +29,8 @@ tr[b-n17afsof3f] {
     border: solid px #DDEEEE;
     padding: 10px;
     text-align: left;
-    text-shadow: 1px 1px 1px #fff;
 }
+    
 
     tr:nth-child(even)[b-n17afsof3f] {
         background: #CCC;
@@ -39,10 +39,34 @@ tr[b-n17afsof3f] {
     tr:nth-child(odd)[b-n17afsof3f] {
         background: #FFF;
     }
+
+    tr:first-child[b-n17afsof3f] {
+        text-shadow: none;
+        font-size: 20px;
+        background: #006747;
+        color: white;
+        border-radius: 10px;
+    }
  
 
 th[b-n17afsof3f] {
     font-weight: normal;
     padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
+}
+
+p[b-n17afsof3f] {
+    padding: 1%;
+    border-radius: 1vh;
+    display: grid;
+    background-color: #CCC;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+}
+
+button[b-n17afsof3f] {
+    margin-left: 25px;
+    margin-right: 25px;
+    border: none;
+    color: white;
+    background-color: #78BE42;
 }

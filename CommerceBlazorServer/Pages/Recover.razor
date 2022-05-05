@@ -1,4 +1,4 @@
-﻿@page "/create"
+﻿@page "/recover"
 @layout DefaultLayout
 @using DataLibrary
 @using CommerceBlazorServer.Models
@@ -7,7 +7,7 @@
 @inject IConfiguration _config
 
 <body>
-<header><PageTitle>Create Account</PageTitle>
+<header><PageTitle>Recover Account</PageTitle>
 </header>
 
 <div>
@@ -37,72 +37,6 @@
 	}
 	</p>
 	<p>
-	<label>Password</label>
-	<br/>
-	<input @bind="password" @bind:event="oninput"/>
-	</p>
-
-	<p>
-	<label>Confirm Password</label>
-	<br/>
-	<input @bind="passwordc" @bind:event="oninput"/>
-	</p>
-	@if(passwordc != password)
-		{
-			<p>(Passwords do not match. Please make sure they are the same)</p>
-		}
-
-	<p>
-	<label>Account Number</label>
-	<br/>
-	<input @bind="account_id" @bind:event="oninput"/>
-		@if (account == null)
-	{
-		<p>…Loading</p>
-	}
-	else
-	{
-		@foreach (var a in account)
-		{
-			if(a.account_id == account_id)
-				{
-						<p>(Account Number already has an existing account)</p>
-						accNum = false;
-					}
-					else
-					{
-						accNum = true;
-						break;
-					}
-				}
-	}
-	</p>
-	<p>
-	<label>Email</label>
-	<br />
-	<input @bind="email" @bind:event="oninput"/>
-			@if (account == null)
-	{
-		<p>…Loading</p>
-	}
-	else
-	{
-		@foreach (var a in account)
-		{
-			if(a.email == email)
-				{
-						<p>(This email already has an existing account)</p>
-						email1 = false;
-					}
-					else
-					{
-						email1 = true;
-						break;
-					}
-				}
-	}
-	</p>
-	<p>
      <label>Recovery Question</label>
 	 <br />
      <select @bind="security_question">
@@ -120,9 +54,22 @@
 	<input @bind="security_answer" @bind:event="oninput" />
 	</p>
 	<p>
-@if(accNum == true && email1 == true && user == true){
-	<button @onclick="InsertData">Submit</button>
-}
+	<p>
+	<label>New Password</label>
+	<br/>
+	<input @bind="password" @bind:event="oninput"/>
+	</p>
+
+	<p>
+	<label>Confirm Password</label>
+	<br/>
+	<input @bind="passwordc" @bind:event="oninput"/>
+	</p>
+	@if(passwordc != password)
+		{
+			<p>(Passwords do not match. Please make sure they are the same)</p>
+		}
+<button @onclick="InsertData">Submit</button>
 </p>
 		@code{
 			public string account_id = "";

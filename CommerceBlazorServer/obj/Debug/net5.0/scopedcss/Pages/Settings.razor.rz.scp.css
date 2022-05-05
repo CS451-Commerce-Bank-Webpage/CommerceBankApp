@@ -11,7 +11,7 @@ body[b-ak2hilm075] {
 
 p[b-ak2hilm075] {
     margin-top: 2em;
-    margin-bottom: 10em;
+    margin-bottom: 6em;
     margin-left: 2em;
 }
 
@@ -21,4 +21,11 @@ PageTitle[b-ak2hilm075] {
 
 label[b-ak2hilm075] {
     font-size: 20px;
+}
+
+button[b-ak2hilm075] {
+    width:stretch;
+    border: none;
+    color: white;
+    background-color: #78BE42;
 }

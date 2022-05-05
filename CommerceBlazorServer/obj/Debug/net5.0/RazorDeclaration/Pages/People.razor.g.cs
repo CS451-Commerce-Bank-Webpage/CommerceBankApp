@@ -13,91 +13,91 @@ namespace CommerceBlazorServer.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 1 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 2 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 6 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 7 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 8 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 9 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using CommerceBlazorServer;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\_Imports.razor"
+#line 10 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using CommerceBlazorServer.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\Pages\People.razor"
+#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\People.razor"
 using DataLibrary;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\Pages\People.razor"
+#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\People.razor"
 using CommerceBlazorServer.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\Pages\People.razor"
+#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\People.razor"
 using Microsoft.Extensions.Configuration;
 
 #line default
@@ -112,15 +112,31 @@ using Microsoft.Extensions.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "C:\Users\Xiaomi\Documents\Commerce\CommerceBankApp-master (2)\CommerceBankApp-master\CommerceBlazorServer\Pages\People.razor"
+#line 25 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\People.razor"
        
     List<PersonModel> people;
+    private async Task InsertData()
+    {
+        string sql = "insert";
+        await _data.SaveData(sql, new {}, _config.GetConnectionString("default"));
+    }
+    private async Task UpdateData()
+    {
+        string sql = "update";
+        await _data.SaveData(sql, new {}, _config.GetConnectionString("default"));
+    }
+    private async Task DeleteData()
+    {
+        string sql = "delete";
+        await _data.SaveData(sql, new {}, _config.GetConnectionString("default"));
+    }
     protected override async Task OnInitializedAsync()
     {
         string sql = "SELECT * FROM transactions ";
 
         people = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
     }
+     
 
 #line default
 #line hidden

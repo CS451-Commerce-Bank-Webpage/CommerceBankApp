@@ -1107,19 +1107,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Xiaomi\\.nuget\\packages\\": {}
+    "C:\\Users\\Nolan\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Xiaomi\\Documents\\GitHub\\CommerceBankApp\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
+      "projectUniqueName": "C:\\Users\\Nolan\\Documents\\GitHub\\CommerceBankApp\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
       "projectName": "CommerceBlazorServer",
-      "projectPath": "C:\\Users\\Xiaomi\\Documents\\GitHub\\CommerceBankApp\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
-      "packagesPath": "C:\\Users\\Xiaomi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Xiaomi\\Documents\\GitHub\\CommerceBankApp\\CommerceBlazorServer\\obj\\",
+      "projectPath": "C:\\Users\\Nolan\\Documents\\GitHub\\CommerceBankApp\\CommerceBlazorServer\\CommerceBlazorServer.csproj",
+      "packagesPath": "C:\\Users\\Nolan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nolan\\Documents\\GitHub\\CommerceBankApp\\CommerceBlazorServer\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Xiaomi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nolan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1133,8 +1140,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Xiaomi\\Documents\\GitHub\\CommerceBankApp\\DataLibrary\\DataLibrary.csproj": {
-              "projectPath": "C:\\Users\\Xiaomi\\Documents\\GitHub\\CommerceBankApp\\DataLibrary\\DataLibrary.csproj"
+            "C:\\Users\\Nolan\\Documents\\GitHub\\CommerceBankApp\\DataLibrary\\DataLibrary.csproj": {
+              "projectPath": "C:\\Users\\Nolan\\Documents\\GitHub\\CommerceBankApp\\DataLibrary\\DataLibrary.csproj"
             }
           }
         }
