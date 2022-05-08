@@ -117,7 +117,7 @@ using Microsoft.Extensions.Configuration;
     List<PersonModel> people;
     protected override async Task OnInitializedAsync()
     {
-        string sql = "SELECT * FROM transactions ";
+        string sql = "SELECT * FROM transactions;";
 
         people = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
     }

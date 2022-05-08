@@ -115,6 +115,7 @@ using Microsoft.Extensions.Configuration;
 #line 25 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\People.razor"
        
     List<PersonModel> people;
+  
     private async Task InsertData()
     {
         string sql = "insert";
@@ -132,7 +133,7 @@ using Microsoft.Extensions.Configuration;
     }
     protected override async Task OnInitializedAsync()
     {
-        string sql = "SELECT * FROM transactions ";
+        string sql = "SELECT * FROM transactions; ";
 
         people = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
     }

@@ -113,48 +113,39 @@ using Microsoft.Extensions.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 127 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
-              
-			public string account_id = "";
-			public string username = "";
-			public string email = "";
-			public string security_question = "";
-			public string password = "";
-			public string passwordc = "";
-			public string security_answer = ""; 
-			public string date_of_birth = "";
-			public Boolean user = false;
-			public Boolean email1 = false;
-			public Boolean accNum = false;
+#line 56 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
+      
+
+			List<PersonModel> account;
+			public PersonModel newAccount = new PersonModel();
+			List<PersonModel> account2;
+			private async Task InsertData()
+			{
+
+				string sql = "insert into database.account(account_id, email, username, password, date_of_birth, security_question, security_answer) values(@account_id, @email, @username, @password, @date, @security_question, @security_answer) ;";
+				await _data.SaveData(sql, new {@newAccount.account_id, @newAccount.email, @newAccount.username, @newAccount.password, @newAccount.date, @newAccount.security_question, @newAccount.security_answer}, _config.GetConnectionString("default"));
+				Navigate();
+			}
+
+		protected override async Task OnInitializedAsync()
+		{
+			string sql = "select account_id,username,email from database.account where account_id is not null and username is not null and email is not null;";
+
+			account = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
 			
-
-	
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 143 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Create.razor"
-              
-	List<PersonModel> account;
-    private async Task InsertData()
-    {
-        string sql = "insert into database.account(account_id, email, username, password, date_of_birth, security_question, security_answer) values(@account_id, @email, @username, @password, @date_of_birth, @security_question, @security_answer) ";
-        await _data.SaveData(sql, new {account_id, email, username, password, date_of_birth, security_question, security_answer}, _config.GetConnectionString("default"));
-    }
-	    protected override async Task OnInitializedAsync()
-    {
-        string sql = "SELECT * FROM account ";
-
-        account = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
-    }
+		}
+		void Navigate()
+		{
+			UriHelper.NavigateTo("/");
+		}
 
   
-	
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager UriHelper { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IConfiguration _config { get; set; }
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IDataAccess _data { get; set; }
     }

@@ -82,6 +82,27 @@ using CommerceBlazorServer.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+using DataLibrary;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+using CommerceBlazorServer.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+using Microsoft.Extensions.Configuration;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(DefaultLayout))]
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
@@ -91,6 +112,44 @@ using CommerceBlazorServer.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 91 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+         
+            List<PersonModel> account;
+            List<PersonModel> account2;
+            CurrentModel nowUser = new CurrentModel();
+            public string username1 = "";
+            public string pass = " ";
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 102 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+               
+            protected override async Task OnInitializedAsync()
+            {
+                string sql = "SELECT * FROM account";
+
+                account = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+            }
+            void Navigate()
+		    {
+			    UriHelper.NavigateTo("/create");
+		    }
+            void Navigate1()
+		    {
+			    UriHelper.NavigateTo("/home");
+		    }
+
+
+#line default
+#line hidden
+#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager UriHelper { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IConfiguration _config { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IDataAccess _data { get; set; }
     }
 }
 #pragma warning restore 1591

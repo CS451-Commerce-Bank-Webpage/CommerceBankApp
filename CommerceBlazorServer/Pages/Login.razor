@@ -1,7 +1,12 @@
 ﻿@page "/"
 @layout DefaultLayout
-
-
+@using DataLibrary
+@using CommerceBlazorServer.Models
+@using Microsoft.Extensions.Configuration
+@inject IDataAccess _data
+@inject IConfiguration _config
+@inject NavigationManager NavManager
+@inject NavigationManager UriHelper
 <body>
 <div class="login">
     
@@ -10,9 +15,37 @@
     <section>
         <h1></h1>
         <img src="https://i.imgur.com/7UD3NZ5.png" alt="logo">
-        <form method="post" action="">
-            <p> <input type="text" name="login" value="" placeholder="Username"></p>
-            <p><input type="text" name="password" value="" placeholder="Password"></p>
+        <EditForm Model="@nowUser" OnValidSubmit="Navigate1">
+            <DataAnnotationsValidator/>
+            <ValidationSummary/>
+           <p>
+	        <InputText id="Login" placeholder="Username" @bind-Value="nowUser.UserName"/>
+	       </p>
+           <p>
+	       <InputText id="Password" placeholder="Password" @bind-Value="nowUser.Password"/>	
+      
+                </p>
+        </EditForm>
+
+
+
+        <button type ="submit" class="btn btn-primary">Login</button>
+        <button type ="submit" class="btn btn-primary" @onclick="Navigate">Create</button>
+
+
+
+
+
+
+
+
+
+
+
+@*        <form method="post" action="">
+            <p> <input type="text" @bind="@userName" @bind:event="oninput"></p>
+           
+            <p><input type="text" @bind="@password" @bind:event="oninput"></p>
             <a href="/home"> <p class="submit"><input type="submit" name="commit" value="Login"></p></a>
 
             <a href="/create"> <p class="submit"><input type="submit" name="commit" value="Create"></p></a>
@@ -52,7 +85,36 @@
             </form>
         </div>
             <p><a href="#">Forgot password?</a></p>
-        </form>
+        </form>*@
     </section>
+@code
+        {
+            List<PersonModel> account;
+            List<PersonModel> account2;
+            CurrentModel nowUser = new CurrentModel();
+            public string username1 = "";
+            public string pass = " ";
+@*            private async Task SelectLogin()
+            {
+                string sql = "SELECT account_id,username,password FROM database.account where username = nowUser.UserName;";
+
+               account2 = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+            }*@
+            protected override async Task OnInitializedAsync()
+            {
+                string sql = "SELECT * FROM account";
+
+                account = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+            }
+            void Navigate()
+		    {
+			    UriHelper.NavigateTo("/create");
+		    }
+            void Navigate1()
+		    {
+			    UriHelper.NavigateTo("/home");
+		    }
+
+}
 </div>
 </body>
