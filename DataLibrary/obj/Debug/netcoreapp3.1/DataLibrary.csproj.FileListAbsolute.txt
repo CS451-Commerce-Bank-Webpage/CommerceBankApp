@@ -28,3 +28,13 @@ C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcor
 C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.CoreCompileInputs.cache
 C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.dll
 C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.pdb
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.deps.json
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.dll
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\bin\Debug\netcoreapp3.1\DataLibrary.pdb
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.AssemblyReference.cache
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.AssemblyInfoInputs.cache
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.AssemblyInfo.cs
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.dll
+C:\Users\Nolan\Documents\GitHub\CommerceBankApp\DataLibrary\obj\Debug\netcoreapp3.1\DataLibrary.pdb

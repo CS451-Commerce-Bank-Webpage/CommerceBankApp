@@ -22,3 +22,10 @@ PageTitle[b-ak2hilm075] {
 label[b-ak2hilm075] {
     font-size: 20px;
 }
+
+button[b-ak2hilm075] {
+    width:stretch;
+    border: none;
+    color: white;
+    background-color: #78BE42;
+}

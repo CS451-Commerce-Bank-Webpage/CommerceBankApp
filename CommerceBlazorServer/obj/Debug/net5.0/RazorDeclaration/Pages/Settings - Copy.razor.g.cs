@@ -82,50 +82,14 @@ using CommerceBlazorServer.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
-using DataLibrary;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
-using CommerceBlazorServer.Models;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
-using Microsoft.Extensions.Configuration;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/transactions")]
-    public partial class Transactions : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/settings")]
+    public partial class Settings___Copy : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 47 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
-                List<PersonModel> people;
-                    protected override async Task OnInitializedAsync()
-                    {
-                        string sql = "SELECT * FROM transactions ";
-
-                        people = await _data.LoadData<PersonModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
-                    } 
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IConfiguration _config { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IDataAccess _data { get; set; }
     }
 }
 #pragma warning restore 1591

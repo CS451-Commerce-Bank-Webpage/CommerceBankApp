@@ -22,3 +22,10 @@ PageTitle {
 label {
     font-size: 20px;
 }
+
+button {
+    width:stretch;
+    border: none;
+    color: white;
+    background-color: #78BE42;
+}

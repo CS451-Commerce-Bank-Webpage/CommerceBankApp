@@ -13,91 +13,91 @@ namespace CommerceBlazorServer.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 1 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 2 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 6 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 7 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 8 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 9 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using CommerceBlazorServer;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
+#line 10 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\_Imports.razor"
 using CommerceBlazorServer.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
 using DataLibrary;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
 using CommerceBlazorServer.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
 using Microsoft.Extensions.Configuration;
 
 #line default
@@ -113,35 +113,37 @@ using Microsoft.Extensions.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 91 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+#line 106 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
          
             List<PersonModel> account;
             List<PersonModel> account2;
             CurrentModel nowUser = new CurrentModel();
             public string username1 = "";
             public string pass = " ";
+            
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 102 "C:\Users\RJ Hughes\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
+#line 117 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Login.razor"
                
             protected override async Task OnInitializedAsync()
             {
                 string sql = "SELECT * FROM account";
 
-                account = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+                account = await _data.LoadData<PersonModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
             }
             void Navigate()
-		    {
-			    UriHelper.NavigateTo("/create");
-		    }
+            {
+                UriHelper.NavigateTo("/create");
+            }
             void Navigate1()
-		    {
-			    UriHelper.NavigateTo("/home");
-		    }
+            {
+                UriHelper.NavigateTo("/home");
+            }
 
+        
 
 #line default
 #line hidden

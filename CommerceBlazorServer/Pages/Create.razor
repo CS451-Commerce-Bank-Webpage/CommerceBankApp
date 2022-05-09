@@ -7,8 +7,20 @@
 @inject IConfiguration _config
 @inject NavigationManager NavManager
 @inject NavigationManager UriHelper
+
+<style>
+    #AccountNumber, #email, #username, #password, #Confirm, #DofB, #sQ, #sA {
+        text-indent: 10px;
+        font-family: "Poppins", sans-serif;
+        font-size: 15px;
+        border: 3px solid #a9a9a9;
+        padding: .25%;
+        border-radius: 2vh;
+        width: 35%;
+    }
+</style>
 <body>
-<PageTitle>Create an Account</PageTitle>
+    <header><PageTitle>Create an Account</PageTitle></header>
 
 <div>
 
@@ -18,10 +30,10 @@
 	<p>
 
 	<p>
-	<InputText id="Account Number" placeholder="Account Number" @bind-Value="newAccount.account_id"/>	
+	<InputText id="AccountNumber" placeholder="Account Number" @bind-Value="newAccount.account_id"/>	
 	</p>
 	<p>
-	<InputText id="email" placeholder="email" @bind-Value="newAccount.email"/>
+	<InputText id="email" placeholder="Email" @bind-Value="newAccount.email"/>
 	</p>
 	<p>
 	<InputText id="username" placeholder="Username" @bind-Value="newAccount.username"/>

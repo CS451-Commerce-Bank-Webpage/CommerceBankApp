@@ -7,6 +7,19 @@
 @inject IConfiguration _config
 @inject NavigationManager NavManager
 @inject NavigationManager UriHelper
+
+<style>
+    #Login, #Password {
+        margin: auto;
+        width: 15vw;
+        text-indent: 10px;
+        font-family: "Poppins", sans-serif;
+        font-size: 20px;
+        border: 3px solid #a9a9a9;
+        padding: 2px;
+        border-radius: 2vh;
+    }
+</style>
 <body>
 <div class="login">
     
@@ -16,51 +29,53 @@
         <h1></h1>
         <img src="https://i.imgur.com/7UD3NZ5.png" alt="logo">
         <EditForm Model="@nowUser" OnValidSubmit="Navigate1">
-            <DataAnnotationsValidator/>
-            <ValidationSummary/>
-           <p>
-	        <InputText id="Login" placeholder="Username" @bind-Value="nowUser.UserName"/>
-	       </p>
-           <p>
-	       <InputText id="Password" placeholder="Password" @bind-Value="nowUser.Password"/>	
-      
-                </p>
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <p>
+                <InputText id="Login" placeholder="Username" @bind-Value="nowUser.UserName" />
+            </p>
+            <p>
+                <InputText id="Password" placeholder="Password" @bind-Value="nowUser.Password" />
+
+            </p>
         </EditForm>
 
 
-
-        <button type ="submit" class="btn btn-primary">Login</button>
-        <button type ="submit" class="btn btn-primary" @onclick="Navigate">Create</button>
-
-
-
-
-
-
+        <p>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </p>
+        <p>
+            <button type="submit" class="btn btn-primary" @onclick="Navigate">Create</button>
+        </p>
+        <p><a href="/recover">Forgot password?</a></p>
 
 
 
 
 
-@*        <form method="post" action="">
+
+
+
+
+        @*        <form method="post" action="">
             <p> <input type="text" @bind="@userName" @bind:event="oninput"></p>
-           
+
             <p><input type="text" @bind="@password" @bind:event="oninput"></p>
             <a href="/home"> <p class="submit"><input type="submit" name="commit" value="Login"></p></a>
 
             <a href="/create"> <p class="submit"><input type="submit" name="commit" value="Create"></p></a>
             <!--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Create Account</button> -->
- 
+
         <div id="id01" class="modal">
-            
+
          <form class="modal-content animate" action="/action_page.php">
                 <div class="container">
                     <div class="fillout">
-                    Username: 
+                    Username:
                     <input type="create" placeholder="Enter Username" name="user" required>
                     <br />
 
-                    Email: 
+                    Email:
                     <input type="create" placeholder="Enter Email" name="email" required>
                     <br />
 
@@ -86,15 +101,15 @@
         </div>
             <p><a href="#">Forgot password?</a></p>
         </form>*@
-    </section>
-@code
+
+        @code
         {
             List<PersonModel> account;
             List<PersonModel> account2;
             CurrentModel nowUser = new CurrentModel();
             public string username1 = "";
             public string pass = " ";
-@*            private async Task SelectLogin()
+            @*            private async Task SelectLogin()
             {
                 string sql = "SELECT account_id,username,password FROM database.account where username = nowUser.UserName;";
 
@@ -104,17 +119,18 @@
             {
                 string sql = "SELECT * FROM account";
 
-                account = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+                account = await _data.LoadData<PersonModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
             }
             void Navigate()
-		    {
-			    UriHelper.NavigateTo("/create");
-		    }
+            {
+                UriHelper.NavigateTo("/create");
+            }
             void Navigate1()
-		    {
-			    UriHelper.NavigateTo("/home");
-		    }
+            {
+                UriHelper.NavigateTo("/home");
+            }
 
-}
+        }
+    </section>
 </div>
 </body>

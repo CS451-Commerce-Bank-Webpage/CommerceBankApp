@@ -83,28 +83,28 @@ using CommerceBlazorServer.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
+#line 3 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions - Copy.razor"
 using DataLibrary;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
+#line 4 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions - Copy.razor"
 using CommerceBlazorServer.Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
+#line 5 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions - Copy.razor"
 using Microsoft.Extensions.Configuration;
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/transactions")]
-    public partial class Transactions : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Transactions___Copy : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -112,14 +112,15 @@ using Microsoft.Extensions.Configuration;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions.razor"
-                List<PersonModel> people;
-                    protected override async Task OnInitializedAsync()
-                    {
-                        string sql = "SELECT * FROM transactions ";
+#line 39 "C:\Users\Nolan\Documents\GitHub\CommerceBankApp\CommerceBlazorServer\Pages\Transactions - Copy.razor"
+       
+    List<PersonModel> people;
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "SELECT * FROM transactions;";
 
-                        people = await _data.LoadData<PersonModel, dynamic>(sql, new { }, _config.GetConnectionString("default"));
-                    } 
+        people = await _data.LoadData<PersonModel, dynamic>(sql, new {}, _config.GetConnectionString("default"));
+    }
 
 #line default
 #line hidden

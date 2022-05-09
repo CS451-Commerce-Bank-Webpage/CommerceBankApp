@@ -29,8 +29,8 @@ tr {
     border: solid px #DDEEEE;
     padding: 10px;
     text-align: left;
-    text-shadow: 1px 1px 1px #fff;
 }
+
 
     tr:nth-child(even) {
         background: #CCC;
@@ -39,10 +39,34 @@ tr {
     tr:nth-child(odd) {
         background: #FFF;
     }
- 
+
+    tr:first-child {
+        text-shadow: none;
+        font-size: 20px;
+        background: #006747;
+        color: white;
+        border-radius: 10px;
+    }
+
 
 th {
     font-weight: normal;
     padding: 10px;
-    text-shadow: 1px 1px 1px #fff;
+}
+
+p {
+    padding: 1%;
+    border-radius: 1vh;
+    display: grid;
+    background-color: #CCC;
+    grid-auto-flow: column;
+    grid-column-gap: 10px;
+}
+
+button {
+    margin-left: 25px;
+    margin-right: 25px;
+    border: none;
+    color: white;
+    background-color: #78BE42;
 }

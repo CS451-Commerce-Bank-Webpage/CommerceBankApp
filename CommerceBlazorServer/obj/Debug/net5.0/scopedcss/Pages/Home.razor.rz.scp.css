@@ -3,6 +3,7 @@ body[b-2qvi1hb5bp] {
     background-image: none;
     border-radius: 10px;
     filter: drop-shadow(0 0 0.25rem rgb(48, 48, 48));
+    height: 90%;
 }
 
 p[b-2qvi1hb5bp] {
@@ -19,8 +20,95 @@ label[b-2qvi1hb5bp] {
     font-size: 20px;
 }
 
-#my-chart.bar[b-2qvi1hb5bp] {
-    height: 200px;
-    max-width: 300px;
-    margin: 0 auto;
+div[b-2qvi1hb5bp] {
+    height: 38vw;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+footer[b-2qvi1hb5bp] {
+    margin-top: 100px;
+}
+
+.graph[b-2qvi1hb5bp] {
+    margin-bottom: 1em;
+    font-family: Poppins;
+}
+
+    .graph caption[b-2qvi1hb5bp] {
+        text-align: center;
+    }
+
+    .graph tbody th[b-2qvi1hb5bp] {
+        text-align: right;
+    }
+
+@supports (display:grid) {
+
+    @media (min-width:25em) {
+
+        .graph[b-2qvi1hb5bp] {
+            display: block;
+            width: 600px;
+            height: 300px;
+        }
+
+            .graph caption[b-2qvi1hb5bp] {
+                display: block;
+            }
+
+            .graph thead[b-2qvi1hb5bp] {
+                display: none;
+            }
+
+            .graph tbody[b-2qvi1hb5bp] {
+                position: relative;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+                align-items: end;
+                height: 100%;
+                margin: 1em 2em 1em 1em;
+                padding: 0 1em;
+                border-bottom: 2px solid rgba(0,0,0,0.5);
+                background: repeating-linear-gradient( 180deg, rgba(170,170,170,0.7) 0, rgba(170,170,170,0.7) 1px, transparent 1px, transparent 20% );
+            }
+
+                .graph tbody[b-2qvi1hb5bp]:before,
+                .graph tbody[b-2qvi1hb5bp]:after {
+                    position: absolute;
+                    left: -3.2em;
+                    width: 2.8em;
+                    text-align: right;
+                }
+
+            .graph tr[b-2qvi1hb5bp] {
+                position: relative;
+                display: block;
+            }
+
+            .graph th[b-2qvi1hb5bp],
+            .graph td[b-2qvi1hb5bp] {
+                display: block;
+                text-align: center;
+            }
+
+            .graph tbody th[b-2qvi1hb5bp] {
+                position: absolute;
+                top: -2em;
+                left: 0;
+                width: 100%;
+                font-weight: normal;
+                text-align: center;
+                white-space: nowrap;
+                text-indent: 0;
+            }
+
+            .graph td[b-2qvi1hb5bp] {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.1em 0.1em 0 0;
+                transition: background 0.5s;
+                color: white;
+            }
+    }
 }
